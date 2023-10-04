@@ -22,49 +22,49 @@
   --black: hsl(198, 86%, 16%);
   --jet: hsl(0, 0%, 20%);
 
-   /* fonte */
---ff-poppins: 'EB Garamond', serif;
+  /* fonte */
+  --ff-poppins: 'EB Garamond', serif;
 
---fs-1: 36px;
---fs-2: 32px;
---fs-3: 30px;
---fs-4: 24px;
---fs-5: 20px;
---fs-6: 18px;
---fs-7: 16px;
---fs-8: 15px;
---fs-9: 14px;
---fs-10: 13px;
---fs-11: 12px;
---fs-12: 11px;
+  --fs-1: 36px;
+  --fs-2: 32px;
+  --fs-3: 30px;
+  --fs-4: 24px;
+  --fs-5: 20px;
+  --fs-6: 18px;
+  --fs-7: 16px;
+  --fs-8: 15px;
+  --fs-9: 14px;
+  --fs-10: 13px;
+  --fs-11: 12px;
+  --fs-12: 11px;
 
---fw-500: 500;
---fw-700: 700;
+  --fw-500: 500;
+  --fw-700: 700;
 
   /* Trasisition */
---transition-1: 0.15s ease;
---transition-2: 0.25s ease-in;
+  --transition-1: 0.15s ease;
+  --transition-2: 0.25s ease-in;
 
-/* spacing */
---section-padding: 100px;
+  /* spacing */
+  --section-padding: 100px;
 }
 
 /*----------------------- */
 /* RESET
 /* ---------------------- */
 
-*{
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-li{
-   list-style: none;
+li {
+  list-style: none;
 }
 
-a{
-   text-decoration: none;
+a {
+  text-decoration: none;
 }
 
 a,
@@ -72,19 +72,63 @@ img,
 span,
 input,
 buttons,
-ion-icon{
-   display: block;
+ion-icon {
+  display: block;
 }
 
-html{
-   font-family: var(--ff-poppins);
-   scroll-behavior: smooth;
+html {
+  font-family: var(--ff-poppins);
+  scroll-behavior: smooth;
 }
 
-body{
-   background: var(--black);
+body {
+  background: var(--black);
 }
 
-body.active{
-   overflow: hidden;
+body.active {
+  overflow: hidden;
+}
+
+.container {
+  padding: 16px;
+}
+
+/*----------------------- */
+/* HEADER
+/* ---------------------- */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-block: 26px;
+  transition: var(--transition-2);
+  z-index: 3;
+}
+
+.header:active {
+  background: rgb(71, 221, 231);
+  padding: 20px;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-actions {
+  display: none;
+}
+
+.bt-mobile ion-icon {
+  font-size: 20px;
+  color: rgb(236, 22, 22);
+  cursor: pointer;
+}
+
+button {
+  background: transparent;
+  border: none;
 }
