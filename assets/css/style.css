@@ -74,11 +74,17 @@ input,
 buttons,
 ion-icon {
   display: block;
+  color: rgb(57, 128, 74);
 }
 
 html {
   font-family: var(--ff-poppins);
   scroll-behavior: smooth;
+}
+
+html :hover {
+  color: aquamarine;
+  font-family: fantasy;
 }
 
 body {
@@ -123,12 +129,95 @@ body.active {
 }
 
 .bt-mobile ion-icon {
-  font-size: 20px;
-  color: rgb(236, 22, 22);
+  font-size: 26px;
+  color: rgb(206, 9, 9);
   cursor: pointer;
 }
 
 button {
   background: transparent;
   border: none;
+}
+
+.naveber {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  background: rgb(26, 46, 83);
+  width: 100%;
+  max-width: 300px;
+  height: 100%;
+  transition: var(--transition-2);
+  visibility: hidden;
+}
+
+.naveber.active {
+  right: 0;
+  visibility: visible;
+  transition: 1.26s ease-out;
+}
+
+.naveber-top {
+  padding: 30px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bt-menu {
+  color: aliceblue;
+  font-size: 25px;
+  padding: 5px;
+}
+
+.bt-menu ion-icon {
+  --ionicon-stroke-width: 81px;
+}
+
+.naveber-list {
+  border-top: 1px solid hsla(180, 7%, 29%, 0.747);
+  margin-bottom: 28px;
+}
+
+.naveber-link {
+  color: rgb(243, 102, 8);
+  font-size: 17px;
+  font-weight: lighter;
+  padding: 10px 25px;
+  border-bottom: 1px solid hsla(180, 10%, 30%, 0.747);
+  transition: var(--transition-2);
+}
+
+.naveber-link:hover {
+  color: rgb(137, 235, 8);
+}
+
+.naveber-social-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.naveber-social-link {
+  font-size: 20px;
+  color: blueviolet;
+  transition: var(--transition-2);
+}
+
+.naveber-social-link:hover {
+  color: aquamarine;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: hsla rgb(216, 24, 24);
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition-2);
+}
+
+.overlay.active {
+  pointer-events: all;
 }
