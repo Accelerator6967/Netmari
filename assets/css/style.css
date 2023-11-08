@@ -53,6 +53,24 @@
 /* RESET
 /* ---------------------- */
 
+.h1, 
+.h2, 
+.h3{color: rgb(94, 94, 94);
+    line-height: 38px;
+}
+
+.h1{
+  font-size: var(--fs-1);
+}
+
+.h2{
+  font-size: var(--fs-2);
+}
+
+.h3{
+  font-size: var(--fs-6);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -220,4 +238,39 @@ button {
 
 .overlay.active {
   pointer-events: all;
+}
+
+/*----------------------- */
+/* BANNER
+/* ---------------------- */
+
+.legend {
+  background: url('../img/teste.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-block: var(--section-padding);
+}
+
+.legend-contain {
+  margin-top: 60px;
+}
+
+.legend-sub {
+  color: gold;
+  font-size: 25px;
+  font-weight: var(--fw-700);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-bottom: 20px;
+}
+
+.legend-title {
+  margin-bottom: 30px;
+}
+
+.legend-title > strong {
+  color: gold;
 }
